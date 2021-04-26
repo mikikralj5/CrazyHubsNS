@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private float forwardSpeed = 10f;
+    private float forwardSpeed = 7f;
     private int movementSection = 1; //0 1 2  
     private float sideStep = 2.5f;
 
