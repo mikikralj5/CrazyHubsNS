@@ -5,43 +5,30 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private CharacterController controller;
-    private Vector3 move;
     private float forwardSpeed = 10f;
-
     private int movementSection = 1; //0 1 2  
     private float sideStep = 2.5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-        
-    }
-
     private void Update()
     {
-        move.z = forwardSpeed;
         MovementMechanics();
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        controller.Move(move * Time.fixedDeltaTime);
+        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
     }
 
    
 
     private void MovementMechanics()
-    {
-       
-      
-
+    { 
         if(SwipeManager.swipeLeft)
         {
             movementSection--;
             if (movementSection == -1)
                 movementSection = 0;
+            CalculatePosition();
         }
 
         if(SwipeManager.swipeRight)
@@ -49,9 +36,8 @@ public class PlayerController : MonoBehaviour
             movementSection++;
             if (movementSection == 3)
                 movementSection = 2;
-        }
-
-        CalculatePosition();
+            CalculatePosition();
+        }       
     }
 
     private void CalculatePosition()
@@ -62,16 +48,8 @@ public class PlayerController : MonoBehaviour
         else if (movementSection == 2)
             targetPosition += Vector3.right * sideStep;
 
-        //transform.position = targetPosition;
+        transform.position = Vector3.Lerp(transform.position,targetPosition,2);
 
-        if (transform.position != targetPosition)
-        {
-            Vector3 diff = targetPosition - transform.position;
-            Vector3 moveDir = diff.normalized * 30 * Time.deltaTime;
-            if (moveDir.sqrMagnitude < diff.magnitude)
-                controller.Move(moveDir);
-            else
-                controller.Move(diff);
-        }
+       
     }
 }
