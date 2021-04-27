@@ -33,5 +33,6 @@ public class Color : MonoBehaviour
             state.CollisionChangeDown(gameObject);
             Debug.Log("slowed");
         }
+       
     }
 }

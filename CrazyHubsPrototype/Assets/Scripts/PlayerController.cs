@@ -11,6 +11,15 @@ public class PlayerController : MonoBehaviour
 
     public float ForwardSpeed { get => forwardSpeed; set => forwardSpeed = value; }
 
+    private void Start()
+    {
+        Physics.gravity *= 2;
+        foreach (var item in GameObject.FindGameObjectsWithTag("Ground"))
+        {
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), item.GetComponent<Collider>(),true);
+        }
+    }
+
     private void Update()
     {
         MovementMechanics();
@@ -18,7 +27,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
+        transform.Translate(Vector3.forward * Time.fixedDeltaTime * forwardSpeed);
     }
 
    
