@@ -16,14 +16,20 @@ public class GroundDestruction : MonoBehaviour
             groundParts.Add(child);
         }
 
-        InvokeRepeating("GroundDestroy", 0, 0.4f);
+      
+
+        InvokeRepeating("GroundDestroy", 0, 0.7f);
     }
 
     private void GroundDestroy()
     {
-        Destroy(groundParts[0].gameObject);
+
         if (groundParts.Count > 0)
+        {
+            Destroy(groundParts[0].gameObject);
             groundParts.RemoveAt(0);
+        }
+            
 
 
     }
