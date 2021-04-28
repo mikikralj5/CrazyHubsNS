@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour
     private float forwardSpeed = 1f;
     private int movementSection = 1; //0 1 2  
     private float sideStep = 2.5f;
+    private float gravityModifier = 2f;
 
     public float ForwardSpeed { get => forwardSpeed; set => forwardSpeed = value; }
 
     private void Start()
     {
-        Physics.gravity *= 2;
+        Physics.gravity *= gravityModifier;
         foreach (var item in GameObject.FindGameObjectsWithTag("Ground"))
         {
             Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), item.GetComponent<Collider>(),true);
