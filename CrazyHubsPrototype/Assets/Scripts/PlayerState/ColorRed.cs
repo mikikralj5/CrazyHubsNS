@@ -14,7 +14,7 @@ public class ColorRed : ColorState
              new UnityEngine.Color(255,255,0) //yellow
     };
        
-        player.tag = "ColorRed";
+       // player.tag = "ColorRed";
         int index = Random.Range(0, 2);
         player.GetComponent<Renderer>().material.color = colors[index];
         ChangeState(color, index);

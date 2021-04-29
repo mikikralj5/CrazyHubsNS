@@ -15,7 +15,7 @@ public class ColorBlue : ColorState
         };
 
         
-        player.tag = "ColorBlue";
+        //player.tag = "ColorBlue";
         int index = Random.Range(0, 2);
         player.GetComponent<Renderer>().material.color = colors[index];
         ChangeState(color, index); 
