@@ -9,7 +9,7 @@ public class Color : MonoBehaviour
     void Start()
     {
         state = new ColorRed();
-        InvokeRepeating("ChangeColor", 2, 3);
+        InvokeRepeating("ChangeColor", 5, 5);
       
     }
     void ChangeColor()
