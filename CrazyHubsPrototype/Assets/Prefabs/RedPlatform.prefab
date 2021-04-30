@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 1726655535273118922}
   m_Layer: 8
   m_Name: RedPlatform
-  m_TagString: ColorRed
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
