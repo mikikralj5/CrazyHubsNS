@@ -15,10 +15,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Physics.gravity *= gravityModifier;
-        foreach (var item in GameObject.FindGameObjectsWithTag("Ground"))
-        {
-            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), item.GetComponent<Collider>(),true);
-        }
+        GroundIgnore();
     }
 
     private void Update()
@@ -29,6 +26,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(Vector3.forward * Time.fixedDeltaTime * forwardSpeed);
+    }
+
+    private void GroundIgnore()
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag("Ground"))
+        {
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), item.GetComponent<Collider>(), true);
+        }
     }
 
    
