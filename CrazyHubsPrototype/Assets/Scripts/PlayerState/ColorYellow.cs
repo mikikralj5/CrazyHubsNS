@@ -15,11 +15,14 @@ public class ColorYellow : ColorState
              new UnityEngine.Color(128, 0, 0), //red
              new UnityEngine.Color(0,0,128) //blue
         };
-       
-        //player.tag = "ColorYellow";
-        int index = Random.Range(0, 2);
-        player.GetComponent<Renderer>().material.color = colors[index];
-        ChangeState(color, index);
+
+
+        if (!RubicksCollectionSwitch(color))
+        {
+            int index = Random.Range(0, 2);
+            player.GetComponent<Renderer>().material.color = colors[index];
+            ChangeState(color, index);
+        }
     }
 
     public override void ChangeState(Color color, int index)
