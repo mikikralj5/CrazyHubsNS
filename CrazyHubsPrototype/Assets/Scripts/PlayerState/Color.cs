@@ -16,6 +16,7 @@ public class Color : MonoBehaviour
     {
         state = new ColorRed();
         InvokeRepeating("ChangeColor", 5, 5);
+        
       
     }
 

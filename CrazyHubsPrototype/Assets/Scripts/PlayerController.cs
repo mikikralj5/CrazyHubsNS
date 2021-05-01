@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private float forwardSpeed = 1f;
+    private float forwardSpeed = 2f;
     private int movementSection = 1; //0 1 2  
     private float sideStep = 2.5f;
     private float gravityModifier = 2f;
+    private float playersY = 1.57f;
 
     public float ForwardSpeed { get => forwardSpeed; set => forwardSpeed = value; }
 
@@ -16,11 +17,13 @@ public class PlayerController : MonoBehaviour
     {
         Physics.gravity *= gravityModifier;
         GroundIgnore();
+       
     }
 
     private void Update()
     {
         MovementMechanics();
+        FixPlayersPosition();
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -33,6 +36,14 @@ public class PlayerController : MonoBehaviour
         foreach (var item in GameObject.FindGameObjectsWithTag("Ground"))
         {
             Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), item.GetComponent<Collider>(), true);
+        }
+    }
+
+    private void FixPlayersPosition()
+    {
+        if(transform.position.y > playersY)
+        {
+            transform.position = new Vector3(transform.position.x, playersY, transform.position.z);
         }
     }
 

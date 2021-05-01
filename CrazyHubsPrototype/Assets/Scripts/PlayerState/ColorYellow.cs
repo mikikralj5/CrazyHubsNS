@@ -34,11 +34,13 @@ public class ColorYellow : ColorState
 
     public override void CollisionChangeUp(GameObject player)
     {
-        player.GetComponent<PlayerController>().ForwardSpeed += 0.5f;
+        player.GetComponent<PlayerController>().ForwardSpeed += speedUp;
+        Debug.Log(speedUp);
     }
 
     public override void CollisionChangeDown(GameObject player)
     {
-        player.GetComponent<PlayerController>().ForwardSpeed -= 0.3f;
+        player.GetComponent<PlayerController>().ForwardSpeed -= speedDown;
+        Debug.Log(speedDown);
     }
 }

@@ -19,6 +19,34 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
+    public void EasyOption()
+    {
+        PlayerPrefs.SetFloat("PlayerSlow", 0.3f);
+        PlayerPrefs.SetFloat("PlayerSpeedup", 0.5f);
+
+        menuStarter.SetActive(true);
+        menuOptions.SetActive(false);
+    }
+
+    public void MedimumOption()
+    {
+        PlayerPrefs.SetFloat("PlayerSlow", 0.4f);
+        PlayerPrefs.SetFloat("PlayerSpeedup", 0.4f);
+
+        menuStarter.SetActive(true);
+        menuOptions.SetActive(false);
+    }
+
+    public void HardOption()
+    {
+        PlayerPrefs.SetFloat("PlayerSlow", 0.5f);
+        PlayerPrefs.SetFloat("PlayerSpeedup", 0.3f);
+
+        menuStarter.SetActive(true);
+        menuOptions.SetActive(false);
+
+    }
+
     public void OpenOptions()
     {
         menuStarter.SetActive(false);
