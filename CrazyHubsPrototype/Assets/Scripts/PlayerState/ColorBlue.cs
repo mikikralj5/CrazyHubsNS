@@ -15,6 +15,7 @@ public class ColorBlue : ColorState
         };
 
 
+        
         if (!RubicksCollectionSwitch(color))
         {
             int index = Random.Range(0, 2);

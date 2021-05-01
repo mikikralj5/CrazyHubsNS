@@ -28,7 +28,7 @@ public abstract class ColorState
         if (blueValue >= color.cubesToCollect && redValue >= color.cubesToCollect && yellowValue >= color.cubesToCollect)
         {
             color.state = new ColorFree();
-            color.gameObject.GetComponent<Renderer>().material.color = new UnityEngine.Color(128, 128, 128);
+            color.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             temp = true;
             color.blueText.text = (blueValue - color.cubesToCollect).ToString();
             color.redText.text = (redValue - color.cubesToCollect).ToString();
@@ -38,6 +38,7 @@ public abstract class ColorState
 
         return temp;
     }
+   
 
 
 

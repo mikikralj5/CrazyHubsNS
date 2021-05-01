@@ -14,7 +14,7 @@ public class ColorRed : ColorState
              new UnityEngine.Color(255,255,0) //yellow
     };
 
-
+        
         if (!RubicksCollectionSwitch(color))
         {
             int index = Random.Range(0, 2);

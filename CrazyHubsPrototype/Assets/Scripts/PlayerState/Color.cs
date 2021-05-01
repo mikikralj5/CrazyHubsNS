@@ -17,11 +17,6 @@ public class Color : MonoBehaviour
         state = new ColorRed();
         InvokeRepeating("ChangeColor", 5, 5);
     }
-
-    private void Update()
-    {
-        //RubicksCollectionSwitch();
-    }
     void ChangeColor()
     {
 
@@ -33,7 +28,7 @@ public class Color : MonoBehaviour
 
         Debug.Log("Platform is" + other.tag);
         Debug.Log("State is" + state.GetType().Name);
-        if(other.CompareTag(state.GetType().Name))
+        if (other.CompareTag(state.GetType().Name))
         {
             state.CollisionChangeUp(gameObject);
 
@@ -44,10 +39,14 @@ public class Color : MonoBehaviour
             state.CollisionChangeUp(gameObject);
             Debug.Log("speedup in ColorFree state");
         }
-        else if(!other.CompareTag(state.GetType().Name))
+        else if (!other.CompareTag(state.GetType().Name))
         {
-            state.CollisionChangeDown(gameObject);
-            Debug.Log("slowed");
+            if (!other.CompareTag("RedPickup") && !other.CompareTag("BluePickup") && !other.CompareTag("YellowPickup"))
+            {
+                state.CollisionChangeDown(gameObject);
+                Debug.Log("slowed");
+            }
+                
         }
       
        

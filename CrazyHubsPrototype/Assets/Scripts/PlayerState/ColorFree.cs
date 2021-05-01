@@ -14,10 +14,19 @@ public class ColorFree : ColorState
              new UnityEngine.Color(255,255,0) //yellow
         };
 
+        RemoveRubiks(color);
         //player.tag = "ColorFree";
         int index = Random.Range(0, 3);
         player.GetComponent<Renderer>().material.color = colors[index];
         ChangeState(color, index);
+    }
+
+    private void RemoveRubiks(Color color)
+    {
+        if (color.gameObject.transform.GetChild(0).gameObject.activeSelf)
+        {
+            color.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     public override void ChangeState(Color color, int index)
@@ -32,7 +41,7 @@ public class ColorFree : ColorState
 
     public override void CollisionChangeUp(GameObject player)
     {
-        player.GetComponent<PlayerController>().ForwardSpeed += 0.25f;
+        player.GetComponent<PlayerController>().ForwardSpeed += 0.1f;
     }
 
     public override void CollisionChangeDown(GameObject player)
