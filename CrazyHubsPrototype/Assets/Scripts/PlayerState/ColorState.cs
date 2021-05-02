@@ -8,7 +8,7 @@ public abstract class ColorState
 
    
     public abstract void ChagneColor(Color color,GameObject player);
-    public abstract void ChangeState(Color color,int index);
+    public abstract void ChangeState(Color color,int index,GameObject player);
     public abstract void CollisionChangeUp(GameObject player);
     public abstract void CollisionChangeDown(GameObject player);
 
@@ -28,7 +28,7 @@ public abstract class ColorState
         int yellowValue = int.Parse(color.yellowText.text);
         bool temp = false;
 
-
+       
         if (blueValue >= color.cubesToCollect && redValue >= color.cubesToCollect && yellowValue >= color.cubesToCollect)
         {
             GameObject.FindObjectOfType<SoundEffectManager>().PlaySound("FreeState");

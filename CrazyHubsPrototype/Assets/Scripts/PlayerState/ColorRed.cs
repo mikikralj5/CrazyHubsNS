@@ -19,21 +19,23 @@ public class ColorRed : ColorState
         {
             int index = Random.Range(0, 2);
             player.GetComponent<Renderer>().material.color = colors[index];
-            ChangeState(color, index);
+            ChangeState(color, index, player);
         }
     }
 
-    public override void ChangeState(Color color, int index)
+    public override void ChangeState(Color color, int index, GameObject player)
     {
 
         if (index == 0)
         {
             RenderSettings.skybox = color.skyBoxBlue;
+            color.ShowBlueParticle(player);
             color.state = new ColorBlue();
         } 
         else
         {
             RenderSettings.skybox = color.skyBoxYellow;
+            color.ShowYellowParticle(player);
             color.state = new ColorYellow();
         }
           

@@ -18,7 +18,7 @@ public class ColorFree : ColorState
         //player.tag = "ColorFree";
         int index = Random.Range(0, 3);
         player.GetComponent<Renderer>().material.color = colors[index];
-        ChangeState(color, index);
+        ChangeState(color, index, player);
     }
 
     private void RemoveRubiks(Color color)
@@ -29,21 +29,24 @@ public class ColorFree : ColorState
         }
     }
 
-    public override void ChangeState(Color color, int index)
+    public override void ChangeState(Color color, int index, GameObject player)
     {
         if (index == 0)
         {
             RenderSettings.skybox = color.skyBoxRed;
+            color.ShowRedParticle(player);
             color.state = new ColorRed();          
         } 
         else if (index == 1)
         {
             RenderSettings.skybox = color.skyBoxBlue;
+            color.ShowBlueParticle(player);
             color.state = new ColorBlue();
         }   
         else
         {
             RenderSettings.skybox = color.skyBoxYellow;
+            color.ShowYellowParticle(player);
             color.state = new ColorYellow();
         }
            

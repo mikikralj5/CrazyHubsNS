@@ -6,13 +6,21 @@ using UnityEngine.UI;
 public class Color : MonoBehaviour
 {
     public ColorState state;
+
     public Text blueText;
     public Text redText;
     public Text yellowText;
+
     public Material skyBoxBlue;
     public Material skyBoxRed;
     public Material skyBoxYellow;
+
+    public GameObject yellowParticle;
+    public GameObject redParticle;
+    public GameObject blueParticle;
+
     public int cubesToCollect = 2;
+
 
 
     void Start()
@@ -54,5 +62,20 @@ public class Color : MonoBehaviour
         }
       
        
+    }
+
+    public void ShowBlueParticle(GameObject player)
+    {
+        Instantiate(blueParticle,player.transform.position,player.transform.rotation);
+    }
+
+    public void ShowRedParticle(GameObject player)
+    {
+        Instantiate(redParticle, player.transform.position, player.transform.rotation);
+    }
+
+    public void ShowYellowParticle(GameObject player)
+    {
+        Instantiate(yellowParticle, player.transform.position, player.transform.rotation);
     }
 }
