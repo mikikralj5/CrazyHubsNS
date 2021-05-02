@@ -21,8 +21,11 @@ public class MenuController : MonoBehaviour
 
     public void EasyOption()
     {
-        PlayerPrefs.SetFloat("PlayerSlow", 0.3f);
-        PlayerPrefs.SetFloat("PlayerSpeedup", 0.5f);
+        //PlayerPrefs.SetFloat("PlayerSlow", 0.6f);
+        //PlayerPrefs.SetFloat("PlayerSpeedup", 0.5f);
+
+        PlayerPrefs.SetFloat("PlayerSlow", 3f);
+        PlayerPrefs.SetFloat("PlayerSpeedup", 7f);
 
         menuStarter.SetActive(true);
         menuOptions.SetActive(false);
@@ -30,7 +33,7 @@ public class MenuController : MonoBehaviour
 
     public void MedimumOption()
     {
-        PlayerPrefs.SetFloat("PlayerSlow", 0.4f);
+        PlayerPrefs.SetFloat("PlayerSlow", 0.8f);
         PlayerPrefs.SetFloat("PlayerSpeedup", 0.4f);
 
         menuStarter.SetActive(true);
@@ -39,7 +42,7 @@ public class MenuController : MonoBehaviour
 
     public void HardOption()
     {
-        PlayerPrefs.SetFloat("PlayerSlow", 0.5f);
+        PlayerPrefs.SetFloat("PlayerSlow", 0.9f);
         PlayerPrefs.SetFloat("PlayerSpeedup", 0.3f);
 
         menuStarter.SetActive(true);

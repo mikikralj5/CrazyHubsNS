@@ -41,7 +41,8 @@ public class ColorFree : ColorState
 
     public override void CollisionChangeUp(GameObject player)
     {
-        player.GetComponent<PlayerController>().ForwardSpeed += 0.1f;
+        //player.GetComponent<PlayerController>().ForwardSpeed += 0.1f;
+        player.GetComponent<PlayerController>().ForwardSpeed = speedUp;
     }
 
     public override void CollisionChangeDown(GameObject player)

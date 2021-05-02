@@ -18,7 +18,7 @@ public class GroundDestruction : MonoBehaviour
 
       
 
-        InvokeRepeating("GroundDestroy", 0, 0.7f);
+        InvokeRepeating("GroundDestroy", 4, 0.3f);
     }
 
     private void GroundDestroy()

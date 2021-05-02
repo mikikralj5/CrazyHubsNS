@@ -12,10 +12,14 @@ public abstract class ColorState
     public abstract void CollisionChangeUp(GameObject player);
     public abstract void CollisionChangeDown(GameObject player);
 
-    protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup",0.5f);
-    protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 0.3f);
+    //protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup",0.5f);
+    //protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 0.3f);
 
-   
+    protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup", 100f);
+    protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 5f);
+
+
+
 
     protected bool RubicksCollectionSwitch(Color color)
     {
