@@ -32,11 +32,21 @@ public class ColorFree : ColorState
     public override void ChangeState(Color color, int index)
     {
         if (index == 0)
-            color.state = new ColorRed();
+        {
+            RenderSettings.skybox = color.skyBoxRed;
+            color.state = new ColorRed();          
+        } 
         else if (index == 1)
+        {
+            RenderSettings.skybox = color.skyBoxBlue;
             color.state = new ColorBlue();
+        }   
         else
+        {
+            RenderSettings.skybox = color.skyBoxYellow;
             color.state = new ColorYellow();
+        }
+           
     }
 
     public override void CollisionChangeUp(GameObject player)

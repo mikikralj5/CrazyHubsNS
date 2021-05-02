@@ -30,9 +30,16 @@ public class ColorYellow : ColorState
 
 
         if (index == 0)
+        {
+            RenderSettings.skybox = color.skyBoxRed;
             color.state = new ColorRed();
+        }    
         else
+        {
+            RenderSettings.skybox = color.skyBoxBlue;
             color.state = new ColorBlue();
+        }
+           
     }
 
     public override void CollisionChangeUp(GameObject player)

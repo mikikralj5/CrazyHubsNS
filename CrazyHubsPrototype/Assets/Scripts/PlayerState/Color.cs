@@ -9,6 +9,9 @@ public class Color : MonoBehaviour
     public Text blueText;
     public Text redText;
     public Text yellowText;
+    public Material skyBoxBlue;
+    public Material skyBoxRed;
+    public Material skyBoxYellow;
     public int cubesToCollect = 2;
 
 

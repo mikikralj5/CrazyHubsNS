@@ -7689,9 +7689,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 395474688}
     - target: {fileID: 507060645, guid: 202f44acdd59b934ebcd36dee3385d2e, type: 3}
+      propertyPath: skyBoxRed
+      value: 
+      objectReference: {fileID: 2100000, guid: f900d41d3f344fb4db0ec1238d6793a3, type: 2}
+    - target: {fileID: 507060645, guid: 202f44acdd59b934ebcd36dee3385d2e, type: 3}
+      propertyPath: skyBoxBlue
+      value: 
+      objectReference: {fileID: 2100000, guid: b66841466255e75449f10f8abaec756b, type: 2}
+    - target: {fileID: 507060645, guid: 202f44acdd59b934ebcd36dee3385d2e, type: 3}
       propertyPath: yellowText
       value: 
       objectReference: {fileID: 1878842752}
+    - target: {fileID: 507060645, guid: 202f44acdd59b934ebcd36dee3385d2e, type: 3}
+      propertyPath: skyBoxYellow
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cc24769be880d24e8f8171214460222, type: 2}
     - target: {fileID: 2050723897073762688, guid: 202f44acdd59b934ebcd36dee3385d2e,
         type: 3}
       propertyPath: m_Enabled
