@@ -11,6 +11,7 @@ public class ColorCubePickups : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<SoundEffectManager>().PlaySound("Pickup");
             temp = int.Parse(text.text);
             temp++;
             text.text = temp.ToString();

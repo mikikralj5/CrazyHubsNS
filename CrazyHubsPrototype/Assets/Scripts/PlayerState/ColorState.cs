@@ -31,6 +31,7 @@ public abstract class ColorState
 
         if (blueValue >= color.cubesToCollect && redValue >= color.cubesToCollect && yellowValue >= color.cubesToCollect)
         {
+            GameObject.FindObjectOfType<SoundEffectManager>().PlaySound("FreeState");
             color.state = new ColorFree();
             color.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             temp = true;

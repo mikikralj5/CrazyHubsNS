@@ -21,6 +21,7 @@ public class Color : MonoBehaviour
     {
 
         state.ChagneColor(this,gameObject);
+        FindObjectOfType<SoundEffectManager>().PlaySound("ColorChange");
     }
 
     private void OnTriggerEnter(Collider other)

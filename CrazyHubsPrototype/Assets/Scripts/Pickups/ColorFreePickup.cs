@@ -16,6 +16,7 @@ public class ColorFreePickup : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            GameObject.FindObjectOfType<SoundEffectManager>().PlaySound("FreeState");
             color.state = new ColorFree();
             Destroy(this.gameObject);
         }
