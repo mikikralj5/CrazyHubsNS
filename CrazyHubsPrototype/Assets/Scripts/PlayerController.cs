@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     { 
         if(SwipeManager.swipeLeft)
         {
+            FindObjectOfType<SoundEffectManager>().PlaySound("Swipe");
             movementSection--;
             if (movementSection == -1)
                 movementSection = 0;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
         if(SwipeManager.swipeRight)
         {
+            FindObjectOfType<SoundEffectManager>().PlaySound("Swipe");
             movementSection++;
             if (movementSection == 3)
                 movementSection = 2;

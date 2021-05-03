@@ -1632,17 +1632,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuStarter: {fileID: 1983450789}
   menuOptions: {fileID: 1606200121}
-  easySpeed: 10.5
-  easySlow: 0.7
+  easySpeed: 11
+  easySlow: 1
   minEasySpeed: 7
-  easyCubesToCollect: 5
-  mediumSpeed: 10.5
-  mediumSlow: 1.2
+  easyCubesToCollect: 3
+  mediumSpeed: 11
+  mediumSlow: 1.3
   minMediumSpeed: 7
-  mediumCubesToCollect: 6
+  mediumCubesToCollect: 4
   hardSpeed: 10.5
   hardSlow: 1.5
-  minHardSpeed: 7
+  minHardSpeed: 5
   hardCubesToCollect: 7
 --- !u!1 &1983450789
 GameObject:

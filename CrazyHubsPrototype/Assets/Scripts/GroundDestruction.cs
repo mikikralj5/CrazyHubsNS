@@ -8,7 +8,7 @@ public class GroundDestruction : MonoBehaviour
     private List<Transform> groundParts = new List<Transform>();
     public GameObject ground;
     public float repeatRate = 0.4f;
-    public float startRate = 2.5f;
+    public float startRate = 1.5f;
     private void Start()
     {
 

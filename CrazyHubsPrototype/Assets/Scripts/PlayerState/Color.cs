@@ -31,7 +31,7 @@ public class Color : MonoBehaviour
     {
         state = new ColorRed();
         InvokeRepeating("ChangeColor", 5, 5);
-        cubesToCollect = PlayerPrefs.GetInt("CubesToCollect");
+        cubesToCollect = PlayerPrefs.GetInt("CubesToCollect",5);
     }
     void ChangeColor()
     {
@@ -66,6 +66,7 @@ public class Color : MonoBehaviour
             }
                 
         }
+        
       
        
     }
