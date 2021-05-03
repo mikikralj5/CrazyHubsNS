@@ -15,9 +15,9 @@ public abstract class ColorState
     //protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup",0.5f);
     //protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 0.3f);
 
-    protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup", 10f);
-    protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 1.5f);
-    protected float minSpeed = PlayerPrefs.GetFloat("MinSpeed", 5f);
+    protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup", 10.5f);
+    protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 1f);
+    protected float minSpeed = PlayerPrefs.GetFloat("MinSpeed", 7f);
 
 
 

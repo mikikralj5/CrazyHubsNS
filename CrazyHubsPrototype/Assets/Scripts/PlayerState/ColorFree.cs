@@ -7,17 +7,18 @@ public class ColorFree : ColorState
     public override void ChagneColor(Color color, GameObject player)
     {
 
-        List<UnityEngine.Color> colors = new List<UnityEngine.Color>(3)
+
+        List<Material> colors = new List<Material>(2)
         {
-             new UnityEngine.Color(128, 0, 0), //red
-             new UnityEngine.Color(0,0,128),//blue
-             new UnityEngine.Color(255,255,0) //yellow
+              color.playerRed, //red
+              color.playerBlue, //blue
+              color.playerYellow //yellow
         };
 
         RemoveRubiks(color);
         //player.tag = "ColorFree";
         int index = Random.Range(0, 3);
-        player.GetComponent<Renderer>().material.color = colors[index];
+        player.GetComponent<Renderer>().material = colors[index];
         ChangeState(color, index, player);
     }
 

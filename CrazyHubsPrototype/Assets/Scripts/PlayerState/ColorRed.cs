@@ -8,17 +8,18 @@ public class ColorRed : ColorState
 
     public override void ChagneColor(Color color, GameObject player)
     {
-        List<UnityEngine.Color> colors = new List<UnityEngine.Color>(2)
-        {
-             new UnityEngine.Color(0, 0, 128), //blue
-             new UnityEngine.Color(255,255,0) //yellow
-    };
 
-        
+        List<Material> colors = new List<Material>(2)
+        {
+              color.playerBlue, //blue
+              color.playerYellow //yellow
+        };
+
+
         if (!RubicksCollectionSwitch(color))
         {
             int index = Random.Range(0, 2);
-            player.GetComponent<Renderer>().material.color = colors[index];
+            player.GetComponent<Renderer>().material = colors[index];
             ChangeState(color, index, player);
         }
     }

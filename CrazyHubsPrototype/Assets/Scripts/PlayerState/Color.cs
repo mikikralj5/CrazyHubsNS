@@ -15,6 +15,10 @@ public class Color : MonoBehaviour
     public Material skyBoxRed;
     public Material skyBoxYellow;
 
+    public Material playerBlue;
+    public Material playerRed;
+    public Material playerYellow;
+
     public GameObject yellowParticle;
     public GameObject redParticle;
     public GameObject blueParticle;
