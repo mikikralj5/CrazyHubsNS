@@ -8,6 +8,16 @@ public class MenuController : MonoBehaviour
 
     public GameObject menuStarter;
     public GameObject menuOptions;
+
+    public float easySpeed;
+    public float easySlow;
+
+    public float mediumSpeed;
+    public float mediumSlow;
+
+    public float hardSpeed;
+    public float hardSlow;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +34,8 @@ public class MenuController : MonoBehaviour
         //PlayerPrefs.SetFloat("PlayerSlow", 0.6f);
         //PlayerPrefs.SetFloat("PlayerSpeedup", 0.5f);
 
-        PlayerPrefs.SetFloat("PlayerSlow", 3f);
-        PlayerPrefs.SetFloat("PlayerSpeedup", 7f);
+        PlayerPrefs.SetFloat("PlayerSlow", easySlow);
+        PlayerPrefs.SetFloat("PlayerSpeedup", easySpeed);
 
         menuStarter.SetActive(true);
         menuOptions.SetActive(false);
@@ -33,8 +43,8 @@ public class MenuController : MonoBehaviour
 
     public void MedimumOption()
     {
-        PlayerPrefs.SetFloat("PlayerSlow", 0.8f);
-        PlayerPrefs.SetFloat("PlayerSpeedup", 0.4f);
+        PlayerPrefs.SetFloat("PlayerSlow", mediumSlow);
+        PlayerPrefs.SetFloat("PlayerSpeedup", mediumSpeed);
 
         menuStarter.SetActive(true);
         menuOptions.SetActive(false);
@@ -42,8 +52,8 @@ public class MenuController : MonoBehaviour
 
     public void HardOption()
     {
-        PlayerPrefs.SetFloat("PlayerSlow", 0.9f);
-        PlayerPrefs.SetFloat("PlayerSpeedup", 0.3f);
+        PlayerPrefs.SetFloat("PlayerSlow", hardSlow);
+        PlayerPrefs.SetFloat("PlayerSpeedup", hardSpeed);
 
         menuStarter.SetActive(true);
         menuOptions.SetActive(false);
