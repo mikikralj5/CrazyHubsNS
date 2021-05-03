@@ -15,7 +15,8 @@ public class GroundDestruction : MonoBehaviour
         //groundParts=ground.GetComponentsInChildren<GameObject>();
         foreach (Transform child in ground.transform)
         {
-            groundParts.Add(child);
+            foreach(Transform item in child)
+                groundParts.Add(item);
         }
 
       

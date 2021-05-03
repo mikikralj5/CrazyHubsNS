@@ -16,7 +16,8 @@ public abstract class ColorState
     //protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 0.3f);
 
     protected float speedUp = PlayerPrefs.GetFloat("PlayerSpeedup", 10f);
-    protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 5f);
+    protected float speedDown = PlayerPrefs.GetFloat("PlayerSlow", 1.5f);
+    protected float minSpeed = PlayerPrefs.GetFloat("MinSpeed", 5f);
 
 
 
@@ -38,6 +39,7 @@ public abstract class ColorState
             color.blueText.text = (blueValue - color.cubesToCollect).ToString();
             color.redText.text = (redValue - color.cubesToCollect).ToString();
             color.yellowText.text = (yellowValue - color.cubesToCollect).ToString();
+           
             
         }
 

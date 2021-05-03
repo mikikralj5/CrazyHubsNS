@@ -19,7 +19,7 @@ public class Color : MonoBehaviour
     public GameObject redParticle;
     public GameObject blueParticle;
 
-    public int cubesToCollect = 2;
+    public int cubesToCollect;
 
 
 
@@ -27,6 +27,7 @@ public class Color : MonoBehaviour
     {
         state = new ColorRed();
         InvokeRepeating("ChangeColor", 5, 5);
+        cubesToCollect = PlayerPrefs.GetInt("CubesToCollect");
     }
     void ChangeColor()
     {
@@ -40,6 +41,7 @@ public class Color : MonoBehaviour
 
         Debug.Log("Platform is" + other.tag);
         Debug.Log("State is" + state.GetType().Name);
+        Debug.Log("Speed is" + gameObject.GetComponent<PlayerController>().ForwardSpeed);
         if (other.CompareTag(state.GetType().Name))
         {
             state.CollisionChangeUp(gameObject);

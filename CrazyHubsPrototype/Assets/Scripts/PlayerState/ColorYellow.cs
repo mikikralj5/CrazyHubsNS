@@ -55,6 +55,7 @@ public class ColorYellow : ColorState
     {
         //player.GetComponent<PlayerController>().ForwardSpeed -= speedDown;
         //Debug.Log(speedDown);
-        player.GetComponent<PlayerController>().ForwardSpeed = speedDown;
+        if (!((player.GetComponent<PlayerController>().ForwardSpeed - speedDown) < minSpeed))
+            player.GetComponent<PlayerController>().ForwardSpeed -= speedDown;
     }
 }
