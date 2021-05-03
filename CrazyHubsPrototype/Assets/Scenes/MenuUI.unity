@@ -1635,15 +1635,15 @@ MonoBehaviour:
   easySpeed: 10.5
   easySlow: 0.7
   minEasySpeed: 7
-  easyCubesToCollect: 2
+  easyCubesToCollect: 5
   mediumSpeed: 10.5
   mediumSlow: 1.2
   minMediumSpeed: 7
-  mediumCubesToCollect: 3
+  mediumCubesToCollect: 6
   hardSpeed: 10.5
   hardSlow: 1.5
   minHardSpeed: 7
-  hardCubesToCollect: 4
+  hardCubesToCollect: 7
 --- !u!1 &1983450789
 GameObject:
   m_ObjectHideFlags: 0
