@@ -1632,7 +1632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuStarter: {fileID: 1983450789}
   menuOptions: {fileID: 1606200121}
-  easySpeed: 11
+  easySpeed: 11.3
   easySlow: 1
   minEasySpeed: 7
   easyCubesToCollect: 3
